@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KD Solanki | Portfolio</title>
+  <style>
+    /* ===== Variables ===== */
+    :root {
+      --primary: #0a84ff; /* Blue highlight */
+      --secondary: #1e1e1e; /* Dark grey for cards */
+      --bg-dark: #000000; /* Pure black background */
+      --text-light: #f5f5f5;
+      --text-muted: #aaa;
+      --border-radius: 12px;
+    }
+
+    /* ===== Global ===== */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: #66b3ff;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: linear-gradient(120deg, #0a0a0a, #111, #0a84ff);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    header p {
+      margin-top: 12px;
+      font-size: 1.2em;
+      opacity: 0.9;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    /* ===== Section Container ===== */
+    section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 40px;
+      background: var(--secondary);
+      border-radius: var(--border-radius);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      transform: translateY(40px);
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+    }
+    section:nth-child(even) {
+      animation-delay: 0.3s;
+    }
+    h2 {
+      font-size: 1.8em;
+      color: var(--primary);
+      border-left: 6px solid var(--primary);
+      padding-left: 12px;
+      margin-bottom: 25px;
+    }
+
+    section p {
+      font-size: 1.05em;
+      color: var(--text-muted);
+    }
+
+    /* ===== Skills ===== */
+    .skills ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .skills li {
+      background: var(--primary);
+      color: black;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-size: 0.95em;
+      cursor: default;
+      transition: all 0.3s ease;
+    }
+    .skills li:hover {
+      background: #66b3ff;
+      transform: scale(1.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    /* ===== Projects ===== */
+    .projects .project {
+      background: #111;
+      margin-bottom: 20px;
+      padding: 20px 25px;
+      border-left: 5px solid var(--primary);
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    }
+    .projects .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+      background: #1a1a1a;
+    }
+    .projects h3 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+    .projects p {
+      margin: 6px 0;
+      color: var(--text-muted);
+    }
+
+    /* ===== Contact ===== */
+    .contact p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #0a0a0a;
+      color: #777;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeInUp {
+      0% { transform: translateY(40px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeInDown {
+      0% { transform: translateY(-30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+      header p {
+        font-size: 1em;
+      }
+      section {
+        margin: 20px;
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>KD Solanki</h1>
+    <p>Computer Science Engineering | AI & ML Specialist</p>
+  </header>
+
+  <!-- About Section -->
+  <section>
+    <h2>About Me</h2>
+    <p>
+      Hi! I am <strong>KD Solanki</strong>, a Computer Science Engineering student passionate about 
+      building intelligent systems. My main focus is on <strong>Artificial Intelligence (AI)</strong> 
+      and <strong>Machine Learning (ML)</strong>, creating systems that learn from data and make smart decisions.  
+    </p>
+    <p>
+      I also work with <strong>Natural Language Processing (NLP)</strong>, <strong>AI Agents</strong>, 
+      <strong>C++ programming</strong>, <strong>IoT devices</strong>, and <strong>Web Development</strong>.  
+      My specialization is in AI, and I aim to design solutions that create real-world impact.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Artificial Intelligence (AI)</li>
+      <li>Machine Learning (ML)</li>
+      <li>Natural Language Processing (NLP)</li>
+      <li>AI Agents</li>
+      <li>C++ Programming</li>
+      <li>Internet of Things (IoT)</li>
+      <li>Web Development</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>1. Smart Chatbot</h3>
+      <p>
+        A conversational chatbot built using NLP techniques that understands user queries, 
+        provides intelligent responses, and adapts over time. Designed for customer support and automation.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>2. AI Agent Simulation</h3>
+      <p>
+        Developed an AI agent capable of basic decision-making tasks such as navigating 
+        a grid, choosing optimal paths, and adapting to changes using reinforcement learning.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>3. IoT Smart Sensor System</h3>
+      <p>
+        Designed a prototype IoT system for real-time monitoring of environmental factors like 
+        temperature and humidity. Data is transmitted to a cloud server and analyzed using ML models.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>4. ML Model for Student Performance Prediction</h3>
+      <p>
+        Built a machine learning model that predicts student performance based on features like 
+        study hours, attendance, and activity levels. Achieved high accuracy using feature engineering.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>5. AI-Powered Resume Screener</h3>
+      <p>
+        Created an AI system that automatically screens resumes and shortlists candidates 
+        based on predefined skill sets using NLP and ranking algorithms.
+      </p>
+    </div>
+
+    <div class="project">
+      <h3>6. Personal Portfolio Website</h3>
+      <p>
+        Designed and developed this responsive portfolio website using HTML and CSS 
+        to showcase skills, projects, and contact details with interactive design.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:kds@example.com">kds@example.com</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/kdsolanki</a></p>
+    <p>GitHub: <a href="#">github.com/kdsolanki</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 KD Solanki. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
